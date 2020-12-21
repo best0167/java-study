@@ -10,18 +10,13 @@ public class Calendar2016 {
             for (int i = 0; i < a - 1; i++) {
                 c += (month[i]);
             }
-            System.out.println(c);
-            System.out.println(c + b);
             c = (c + b) % 7;
-            System.out.println(c);
 
             if(c - 1 < 0) {
                 answer = weekday[c + 6];
             } else {
                 answer = weekday[c - 1];
             }
-            System.out.println(answer);
-
         }
         return answer;
     }
