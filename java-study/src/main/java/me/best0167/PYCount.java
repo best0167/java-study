@@ -1,21 +1,19 @@
 package me.best0167;
 
-import java.util.Arrays;
-
 public class PYCount {
     public static boolean solution(String s) {
         boolean answer = true;
 
         char[] temp = s.toLowerCase().toCharArray();
-        int a = 0;
+        int count = 0;
         for(int i = 0; i < s.length(); i++) {
             if(temp[i] == 'p') {
-                a++;
+                count++;
             } else if(temp[i] == 'y') {
-                a--;
+                count--;
             }
         }
-        if(a != 0) {
+        if(count != 0) {
             answer = false;
         }
         return answer;
