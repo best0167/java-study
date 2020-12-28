@@ -5,13 +5,13 @@ public class MiddleLetter {
         String answer = "";
 
         if(s.length() % 2 == 0) {
-            char charAt1 = s.charAt(s.length() / 2 - 1);
-            char charAt2 = s.charAt(s.length() / 2);
-            answer += String.valueOf(charAt1);
-            answer += String.valueOf(charAt2);
+            char middle_1 = s.charAt(s.length() / 2 - 1);
+            char middle = s.charAt(s.length() / 2);
+            answer += String.valueOf(middle_1);
+            answer += String.valueOf(middle);
         } else {
-            char charAt = s.charAt(s.length() / 2);
-            answer = String.valueOf(charAt);
+            char middle = s.charAt(s.length() / 2);
+            answer = String.valueOf(middle);
         }
 
         return answer;
