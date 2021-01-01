@@ -1,23 +1,37 @@
 package me.best0167;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class SmallNumberRemove {
     public static int[] solution(int[] arr) {
-        int[] answer = {};
+        int[] answer;
 
         if(arr.length <= 1) {
-            return new int[]{-1};
-        } /* else {
+            answer = new int[]{-1};
+            return answer;
+        }
 
-            for(int i = 0; i < arr.length -1; i++) {
+        int min = arr[0];
+        for(int i = 1; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+        }
 
+        answer = new int[arr.length-1];
+        int index = 0;
+
+        for (int j : arr) {
+            if (j == min) {
+                continue;
             }
-        } */
-
-
+            answer[index++] = j;
+        }
+        /* for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == min) {
+                continue;
+            }
+            answer[index++] = arr[i];
+        }
+         */
         return answer;
     }
 
