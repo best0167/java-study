@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SmallNumberRemove {
     public static int[] solution(int[] arr) {
-        int[] answer;
+        int[] answer = {};
 
         if(arr.length <= 1) {
             answer = new int[]{-1};
