@@ -6,7 +6,17 @@ public class GreatestLeastCommonMultiple {
     public static int[] solution(int n, int m) {
         int[] answer = new int[2];
 
-        int a = n;
+        answer[0] = gcd(n, m);
+
+        if(answer[0] == 1) {
+            answer[1] = n * m;
+        } else {
+            answer[1] = m * (n / answer[0]);
+        }
+
+        return answer;
+
+        /*int a = n;
         int b = m;
 
         while (a > 0) {
@@ -19,8 +29,6 @@ public class GreatestLeastCommonMultiple {
                 break;
             }
         }
-        answer[0] = a;
-
 
         if(answer[0] == 1) {
             answer[1] = n * m;
@@ -28,7 +36,15 @@ public class GreatestLeastCommonMultiple {
             answer[1] = m * (n / a);
         }
 
-        return answer;
+        return answer;*/
+    }
+
+    public static int gcd(int n, int m) {
+        if (m == 0) {
+            return n;
+        }
+
+        return gcd(m, n % m);
     }
 
     public static void main(String[] args) {
