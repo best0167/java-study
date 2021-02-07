@@ -7,6 +7,7 @@ public class CacheFirst {
     }
 
     public static void main(String[] args) {
+
         int cacheSize = 3;
         String[] cities = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"};
         System.out.println(solution(cacheSize, cities));
