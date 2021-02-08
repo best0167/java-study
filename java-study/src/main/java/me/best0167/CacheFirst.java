@@ -3,6 +3,7 @@ package me.best0167;
 public class CacheFirst {
     public static int solution(int cacheSize, String[] cities) {
         int answer = 0;
+
         return answer;
     }
 
