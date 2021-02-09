@@ -7,6 +7,7 @@ public class CacheFirst {
         return answer;
     }
 
+
     public static void main(String[] args) {
 
         int cacheSize = 3;
