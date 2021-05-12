@@ -5,7 +5,15 @@ import java.util.Arrays;
 public class PalindromeString {
     public static String solution(String s) {
         String answer = "YES";
-        s = s.toUpperCase();
+        String tmp = new StringBuilder(s).reverse().toString();
+
+        if(!s.equalsIgnoreCase(tmp)) {
+            answer = "NO";
+        }
+
+        return answer;
+
+        /*s = s.toUpperCase();
         int len = s.length();
         for (int i = 0; i < len / 2; i++) {
             if (s.charAt(i) != s.charAt(len - i - 1)) {
@@ -13,7 +21,8 @@ public class PalindromeString {
             }
         }
 
-        return answer;
+        return answer;*/
+
 
         /*String answer = "";
 
