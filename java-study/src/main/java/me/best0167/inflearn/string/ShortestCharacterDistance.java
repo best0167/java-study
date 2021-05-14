@@ -9,11 +9,11 @@ public class ShortestCharacterDistance {
         for(int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == t) {
                 p = 0;
-                answer[i] = p;
             } else {
                 p++;
-                answer[i] = p;
             }
+            answer[i] = p;
+            // System.out.println(Arrays.toString(answer));
         }
 
         p = 1000;
@@ -23,6 +23,7 @@ public class ShortestCharacterDistance {
             } else {
                 p++;
                 answer[i] = Math.min(answer[i], p);
+                // System.out.println(Arrays.toString(answer));
             }
         }
 
