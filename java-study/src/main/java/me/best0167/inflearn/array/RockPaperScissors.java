@@ -28,7 +28,11 @@ public class RockPaperScissors {
         int n = 5;
         int[] a = {2, 3, 3, 1, 3};
         int[] b = {1, 1, 2, 2, 3};
-        System.out.println(solution(n, a, b));
+
+        for(char x : solution(n, a, b).toCharArray()) {
+            System.out.println(x);
+        }
+
     }
 
 }
