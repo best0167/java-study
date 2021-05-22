@@ -34,6 +34,6 @@ public class FibonacciSequence {
 
     public static void main(String[] args) {
         int n = 10;
-        System.out.println(solution(n));
+        System.out.println(Arrays.toString(solution(n)));
     }
 }
