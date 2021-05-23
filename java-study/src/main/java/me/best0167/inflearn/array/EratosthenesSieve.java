@@ -8,8 +8,8 @@ public class EratosthenesSieve {
         for(int i = 2; i <= n; i++) {
             if(ch[i] == 0) {
                 answer++;
-                for (int j = i; j <= n; j = j + 1) {
-                    ch[j] = 1;
+                for (int j = i; i * j <= n; j = j + 1) {
+                    ch[i * j] = 1;
                 }
             }
         }
