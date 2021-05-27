@@ -13,7 +13,8 @@ public class Peak {
                 for (int k = 0; k < 4; k++) {
                     int nx = i + dx[k];
                     int ny = j + dy[k];
-                    if(nx >= 0 && nx < n && ny >= 0 && ny < n &&array[nx][ny] >= array[i][j] ) {                       flag = false;
+                    if(nx >= 0 && nx < n && ny >= 0 && ny < n && array[nx][ny] >= array[i][j] ) {
+                        flag = false;
                         break;
                     }
                 }
