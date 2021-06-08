@@ -17,7 +17,9 @@ public class ContinuousNaturalNumberSum {
             }
             while(sum>=n){
                 sum-=arr[lt++];
-                if(sum==n) answer++;
+                if(sum==n) {
+                    answer++;
+                }
             }
         }
 
