@@ -3,20 +3,26 @@ package me.best0167.inflearn.hashmaptreeset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TypeOfSales {
     public static List<Integer> solution(int n, int m, int[] array) {
         List<Integer> answer = new ArrayList<>();
-        HashMap<Integer, Integer> HM = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
         for(int i = 0; i < m - 1; i++){
-            HM.put(array[i], HM.getOrDefault(array[i], 0)+1);
+            map.put(array[i], map.getOrDefault(array[i], 0) + 1);
         }
         int lt=0;
         for(int rt = m-1; rt < n; rt++){
-            HM.put(array[rt], HM.getOrDefault(array[rt], 0)+1);
-            answer.add(HM.size());
-            HM.put(array[lt], HM.get(array[lt])-1);
-            if(HM.get(array[lt])==0) HM.remove(array[lt]);
+            map.put(array[rt], map.getOrDefault(array[rt], 0) + 1);
+            answer.add(map.size());
+
+            map.put(array[lt], map.get(array[lt])-1);
+
+            if(map.get(array[lt])==0) {
+                map.remove(array[lt]);
+            }
             lt++;
         }
         return answer;
