@@ -4,9 +4,21 @@ import java.util.Arrays;
 
 public class SelectionSort {
     public static int[] solution(int n, int[] array) {
-        int[] answer = new int[n];
 
-        return answer;
+        for(int i=0; i<n-1; i++){
+            int idx=i;
+            for(int j = i+1; j < n; j++){
+                if(array[j] < array[idx]) {
+                    idx=j;
+                }
+            }
+            int tmp = array[i];
+            array[i] = array[idx];
+            array[idx] = tmp;
+        }
+
+        return array;
+
     }
 
     public static void main(String[] args) {
