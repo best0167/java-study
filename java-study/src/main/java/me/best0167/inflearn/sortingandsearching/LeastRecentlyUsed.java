@@ -4,7 +4,27 @@ import java.util.Arrays;
 
 public class LeastRecentlyUsed {
     public static int[] solution(int n, int m, int[] array) {
-        int[] answer = {};
+        int[] answer = new int[n];
+
+        for(int x : array){
+            int pos = -1;
+            for(int i = 0; i < n; i++) {
+                if(x == answer[i]) {
+                    pos = i;
+                }
+            }
+            if(pos == -1){
+                for(int i = n-1; i >= 1; i--){
+                    answer[i] = answer[i-1];
+                }
+            }
+            else{
+                for(int i = pos; i >= 1; i--){
+                    answer[i] = answer[i-1];
+                }
+            }
+            answer[0] = x;
+        }
 
         return answer;
     }
