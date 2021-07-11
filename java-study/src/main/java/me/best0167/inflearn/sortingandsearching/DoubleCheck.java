@@ -1,8 +1,18 @@
 package me.best0167.inflearn.sortingandsearching;
 
+import java.util.Arrays;
+
 public class DoubleCheck {
     public static String solution(int n, int[] array) {
-        String answer = "";
+        String answer="U";
+
+        Arrays.sort(array);
+        for(int i = 0; i < n-1; i++){
+            if(array[i] == array[i+1]){
+                answer = "D";
+                break;
+            }
+        }
 
         return answer;
     }
