@@ -6,6 +6,7 @@ public class CrainDollDraw {
     public static int solution(int[][] board, int[] moves) {
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
+
         for (int pos : moves) {
             for (int i = 0; i < board.length; i++) {
                 if (board[i][pos - 1] != 0) {
@@ -20,9 +21,11 @@ public class CrainDollDraw {
                     break;
                 }
             }
+
         }
         return answer;
     }
+
 
     public static void main(String[] args) {
         int[][] board = {{0, 0, 0, 0, 0},
